@@ -3,6 +3,7 @@ const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{4,20}$/;
 const mobileRegex = /^\d{11,15}$/;
 const addressRegex = /^[a-zA-Z0-9\s,-]+$/;
+// const userName=document.getElementById("userName");
 // userName
 const usernameRegex = /^[a-zA-Z]{3,20}$/;
 document.getElementById('userName').addEventListener("input",()=>{
@@ -97,19 +98,31 @@ document.getElementById('userName').addEventListener("input",()=>{
 })
    //Adress
    document.getElementById('userAdress').addEventListener("input",()=>{
-    let userName = document.getElementById('userAdress')
-    let userNameAlertText = document.getElementById('userAdressAlertText');
-    let userNameText = document.querySelector(".userAdressLabel");
-    if (addressRegex.test(userName.value)) {
-        userNameText.style.backgroundColor = "green";
-        userNameText.style.color= "white";
-        userNameAlertText.style.backgroundColor=""
-        userNameAlertText.classList=""
-        userNameAlertText.innerText = ""
+    let inputField = document.getElementById('userAdress')
+    let alertArea = document.getElementById('userAdressAlertText');
+    if (addressRegex.test(inputField.value)) {
+        inputField.classList="form-control is-valid"
+        alertArea.innerText="Not Valid"
+        alertArea.classList="d-none"  
     } else{
-        //userName.classList="form-control is-invalid"
-        userNameAlertText.style.color="red"
-        userNameAlertText.classList="pl-5 pr-5 container-fluid w-100"
-        userNameAlertText.innerText = "Name Must Contain Three Letter and No Digits"
+        alertArea.innerText="Not Valid"
+        alertArea.classList="invalid-feedback d-block"
+        inputField.classList="form-control is-invalid"
     }
 })
+
+
+// =========================================================
+// imageRealTimePriview
+
+let imgInput = document.getElementById('userImage');
+document.getElementById('imageBtn').addEventListener('click', () => {
+    imgInput.click();
+});
+let preview = document.getElementById('imagePreview');
+imgInput.addEventListener('change', () => {
+    if (imgInput.files && imgInput.files[0]) {
+        preview.src = URL.createObjectURL(imgInput.files[0]);
+        preview.style.display = 'inline-block';
+    }
+});

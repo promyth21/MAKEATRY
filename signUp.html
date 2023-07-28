@@ -14,91 +14,78 @@
     <header>
     </header>
     <section class="d-flex justify-content-center">
-        <form action="" class="border-1 botder border-white">
+        <form action="" class="border-1 botder border-white w-25">
             <h4 class="text-light text-center">Lets Make A try</h4>
-          <div class="d-flex">
+            <!-- name -->
             <div class="container">
-                <!-- name -->
-                <div class="container">
-                    <div class="input-group d-flex mt-4 mb-2">
-                        <span class="input-group-text userNameLabel" id="addon-wrapping">Name</span>
-                        <input id="userName" type="text" class="form-control" aria-label="Username"
-                            aria-describedby="addon-wrapping">
-                    </div>
-                    <span id="userNameAlertText" class="d-block">
-                    </span>
+                <div class="input-group d-flex mt-4 mb-2">
+                    <span class="input-group-text userNameLabel" id="addon-wrapping">Name</span>
+                    <input id="userName" type="text" class="form-control" aria-label="Username"
+                        aria-describedby="addon-wrapping">
                 </div>
-                <!-- email -->
-                <div class="container">
-                    <div class="input-group flex-nowrap mt-2 mb-2">
-                        <span class="input-group-text userEmailLabel" id="addon-wrapping">Email</span>
-                        <input type="text" id="userEmail" class="form-control" aria-label="Username"
-                            aria-describedby="addon-wrapping">
-                    </div>
-                    <span id="userEmailAlertText" class="">
-                </div>
-                <!-- password -->
-                <div class="container">
-                    <div class="input-group flex-nowrap mt-2 mb-2">
-                        <span class="input-group-text userPasswordLabel" id="addon-wrapping">Password</span>
-                        <input type="text" id="userPassword" class="form-control" aria-label="Username"
-                            aria-describedby="addon-wrapping">
-                    </div>
-                    <span id="userPasswordAlertText" class="">
-                </div>
-                <!--Confirm password -->
-                <div class="container">
-                    <div class="input-group flex-nowrap mt-2 mb-2">
-                        <span class="input-group-text userConfirmPasswordLabel" id="addon-wrapping">Confirm
-                            Password</span>
-                        <input type="text" id="userConfirmPassword" class="form-control" aria-label="Username"
-                            aria-describedby="addon-wrapping">
-                    </div>
-                    <span id="userConfirmPasswordAlertText" class="">
-                </div>
-                <!--mobile-->
-                <div class="container">
-                    <div class="input-group flex-nowrap mt-2 mb-2">
-                        <span class="input-group-text userMobileLabel" id="addon-wrapping">Mobile</span>
-                        <input type="text" id="userMobile" class="form-control" aria-label="Username"
-                            aria-describedby="addon-wrapping">
-                    </div>
-                    <span id="userMobileAlertText" class="">
-                </div>
-                <!-- Adress -->
-                <div class="container">
-                    <div class="input-group flex-nowrap mt-2 mb-2">
-                        <span class="input-group-text userAdressLabel" id="addon-wrapping">Adress</span>
-                        <input type="text" id="userAdress" class="form-control" aria-label="Username"
-                            aria-describedby="addon-wrapping">
-                    </div>
-                    <span id="userAdressAlertText" class="">
-                </div>
+                <span id="userNameAlertText" class="d-block">
+                </span>
             </div>
-            <div class="div" style="width: 200px; height: 200px;">
-                <div class="form-group">
-                    <img id="imagePreview" style="display: none; width: 100%; max-height: 200px;">
-                    <!-- <label for="exampleInputPassword1">Product Image</label> -->
-                    <input type="file" class="form-control border-0" id="productImage" name="productImage">
+            <!-- email -->
+            <div class="container">
+                <div class="input-group flex-nowrap mt-2 mb-2">
+                    <span class="input-group-text userEmailLabel" id="addon-wrapping">Email</span>
+                    <input type="text" id="userEmail" class="form-control" aria-label="Username"
+                        aria-describedby="addon-wrapping">
                 </div>
-                <!-- file View -->
-                <script>
-                    let preview = document.getElementById('imagePreview');
-                    let imgInput = document.getElementById('productImage');
-                    imgInput.addEventListener('change', () => {
-                        if (imgInput.files && imgInput.files[0]) {
-                            preview.src = URL.createObjectURL(imgInput.files[0]);
-                            preview.style.display = 'block';
-                        }
-                    });
-                </script>
+                <span id="userEmailAlertText" class="">
             </div>
-          </div>
+            <!-- password -->
+            <div class="container">
+                <div class="input-group flex-nowrap mt-2 mb-2">
+                    <span class="input-group-text userPasswordLabel" id="addon-wrapping">Password</span>
+                    <input type="text" id="userPassword" class="form-control" aria-label="Username"
+                        aria-describedby="addon-wrapping">
+                </div>
+                <span id="userPasswordAlertText" class="">
+            </div>
+            <!--Confirm password -->
+            <div class="container">
+                <div class="input-group flex-nowrap mt-2 mb-2">
+                    <span class="input-group-text userConfirmPasswordLabel" id="addon-wrapping">Confirm
+                        Password</span>
+                    <input type="text" id="userConfirmPassword" class="form-control" aria-label="Username"
+                        aria-describedby="addon-wrapping">
+                </div>
+                <span id="userConfirmPasswordAlertText" class="">
+            </div>
+            <!--mobile-->
+            <div class="container">
+                <div class="input-group flex-nowrap mt-2 mb-2">
+                    <span class="input-group-text userMobileLabel" id="addon-wrapping">Mobile</span>
+                    <input type="text" id="userMobile" class="form-control" aria-label="Username"
+                        aria-describedby="addon-wrapping">
+                </div>
+                <span id="userMobileAlertText" class="">
+            </div>
+            <!-- Adress -->
+            <div class="container is-invalid">
+                <div class="input-group flex-nowrap mt-2 mb-2">
+                    <span class="input-group-text userAdressLabel" id="addon-wrapping">Adress</span>
+                    <input type="text" id="userAdress" class="form-control" aria-label="Username"
+                        aria-describedby="addon-wrapping">
+                </div>
+                <span id="userAdressAlertText" class="">
+            </div>
+            <!-- image -->
+            <div class="container">
+                <div class="input-group mt-2 mb-2">
+                    <input type="file" class="form-control img-fluid" id="userImage" name="userImage" hidden
+                        accept="Image/*">
+                    <img id="imagePreview" class="w-100" style="display: none;max-height: 300px; object-fit: fill;">
+                </div>
+                <!-- <span id="userAdressAlertText" class=""> -->
+                    <h5 class="btn btn-light container w-100" id="imageBtn">Upload Image</h5>
+            </div>
             <div class="container d-flex justify-content-between">
                 <a href="#" class="btn btn-outline-light" id="submitBtn">Join</a>
                 <a class="text-decoration-none text-success" href="#">Already A User</a>
             </div>
-
         </form>
     </section>
     <script src="signup.js"></script>
