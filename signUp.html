@@ -14,14 +14,15 @@
     <header>
     </header>
     <section class="d-flex justify-content-center">
-        <form action="signupAction.php" class="border-1 botder border-white w-25" enctype="multipart/form-data" method="post">
+        <form action="signupAction.php" class="border-1 botder border-white w-25" enctype="multipart/form-data"
+            method="post">
             <h4 class="text-light text-center">Lets Make A try</h4>
             <!-- name -->
             <div class="container">
                 <div class="input-group d-flex mt-4 mb-2">
                     <span class="input-group-text userNameLabel" id="addon-wrapping">Name</span>
                     <input id="userName" type="text" class="form-control" aria-label="Username"
-                        aria-describedby="addon-wrapping">
+                        aria-describedby="addon-wrapping" name="userName">
                 </div>
                 <span id="userNameAlertText" class="d-block">
                 </span>
@@ -31,7 +32,7 @@
                 <div class="input-group flex-nowrap mt-2 mb-2">
                     <span class="input-group-text userEmailLabel" id="addon-wrapping">Email</span>
                     <input type="text" id="userEmail" class="form-control" aria-label="Username"
-                        aria-describedby="addon-wrapping">
+                        aria-describedby="addon-wrapping" name="userEmail">
                 </div>
                 <span id="userEmailAlertText" class="">
             </div>
@@ -40,7 +41,7 @@
                 <div class="input-group flex-nowrap mt-2 mb-2">
                     <span class="input-group-text userPasswordLabel" id="addon-wrapping">Password</span>
                     <input type="text" id="userPassword" class="form-control" aria-label="Username"
-                        aria-describedby="addon-wrapping">
+                        aria-describedby="addon-wrapping" name="userPassword">
                 </div>
                 <span id="userPasswordAlertText" class="">
             </div>
@@ -50,7 +51,7 @@
                     <span class="input-group-text userConfirmPasswordLabel" id="addon-wrapping">Confirm
                         Password</span>
                     <input type="text" id="userConfirmPassword" class="form-control" aria-label="Username"
-                        aria-describedby="addon-wrapping">
+                        aria-describedby="addon-wrapping" name="userConfirmPassword">
                 </div>
                 <span id="userConfirmPasswordAlertText" class="">
             </div>
@@ -58,17 +59,44 @@
             <div class="container">
                 <div class="input-group flex-nowrap mt-2 mb-2">
                     <span class="input-group-text userMobileLabel" id="addon-wrapping">Mobile</span>
-                    <input type="text" id="userMobile" class="form-control" aria-label="Username"
+                    <input type="text" id="userMobile" name="userMobile" class="form-control" aria-label="Username"
                         aria-describedby="addon-wrapping">
                 </div>
                 <span id="userMobileAlertText" class="">
             </div>
             <!-- Adress -->
-            <div class="container is-invalid">
+            <div class="container">
                 <div class="input-group flex-nowrap mt-2 mb-2">
                     <span class="input-group-text userAdressLabel" id="addon-wrapping">Adress</span>
-                    <input type="text" id="userAdress" class="form-control" aria-label="Username"
+                    <input type="text" id="userAdress" name="userAdress" class="form-control" aria-label="Username"
                         aria-describedby="addon-wrapping">
+                </div>
+                <span id="userAdressAlertText" class="">
+            </div>
+            <!-- gender -->
+            <div class="container">
+                <div class="input-group flex-nowrap mt-2 mb-2 ">
+                    <span class="input-group-text userAdressLabel" id="addon-wrapping">Gender</span>
+                    <div class="w-100 bg-white d-flex align-items-center justify-content-evenly">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="userGender" id="exampleRadios1" value="male" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                Male
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="userGender" id="exampleRadios2" value="female">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Female
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="userGender" id="exampleRadios2" value="other">
+                            <label class="form-check-label" for="exampleRadios2">
+                              Other
+                            </label>
+                          </div>
+                    </div>
                 </div>
                 <span id="userAdressAlertText" class="">
             </div>
@@ -80,10 +108,11 @@
                     <img id="imagePreview" class="w-100" style="display: none;max-height: 300px; object-fit: fill;">
                 </div>
                 <!-- <span id="userAdressAlertText" class=""> -->
-                    <h5 class="btn btn-light container w-100" id="imageBtn">Upload Image</h5>
+                <h5 class="btn btn-light container w-100" id="imageBtn">Upload Image</h5>
             </div>
             <div class="container d-flex justify-content-between">
-                <a href="#" class="btn btn-outline-light" id="submitBtn">Join</a>
+<button type="submit" class="btn btn-outline-light"> Join
+</button>
                 <a class="text-decoration-none text-success" href="#">Already A User</a>
             </div>
         </form>
