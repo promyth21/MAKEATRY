@@ -5,95 +5,74 @@ const mobileRegex = /^\d{11,15}$/;
 const addressRegex = /^[a-zA-Z0-9\s,-]+$/;
 // const userName=document.getElementById("userName");
 // userName
-const usernameRegex = /^[a-zA-Z]{3,20}$/;
+const nameRegex = /^[a-zA-Z]{3,20}$/;
 document.getElementById('userName').addEventListener("input",()=>{
-        let userName = document.getElementById('userName')
-        let userNameAlertText = document.getElementById('userNameAlertText');
-        let userNameText = document.querySelector(".userNameLabel");
-        if (usernameRegex.test(userName.value)) {
-            userNameText.style.backgroundColor = "green";
-            userNameText.style.color= "white";
-            userNameAlertText.style.backgroundColor=""
-            userNameAlertText.classList=""
-            userNameAlertText.innerText = ""
-        } else{
-            userNameText.style.backgroundColor = "red";
-            // userName.classList="form-control is-invalid"
-            userNameAlertText.style.backgroundColor="red"
-            userNameAlertText.classList="pl-5 pr-5 container-fluid w-100"
-            userNameAlertText.innerText = "Name Must Contain Three Letter and No Digits"
-        }
-    })
+    let inputField = document.getElementById('userName')
+    let alertArea = document.getElementById('userNameAlertText');
+    if (nameRegex.test(inputField.value)) {
+        inputField.classList="form-control is-valid"
+        alertArea.innerText="Not Valid"
+        alertArea.classList="d-none"  
+    } else{
+        alertArea.innerText="Not Valid"
+        alertArea.classList="invalid-feedback d-block"
+        inputField.classList="form-control is-invalid"
+    }
+})
     // Email
     document.getElementById('userEmail').addEventListener("input",()=>{
-        let userName = document.getElementById('userEmail')
-        let userNameAlertText = document.getElementById('userEmailAlertText');
-        let userNameText = document.querySelector(".userEmailLabel");
-        if (emailRegex.test(userName.value)) {
-            userNameText.style.backgroundColor = "green";
-            userNameText.style.color= "white";
-            userNameAlertText.style.backgroundColor=""
-            userNameAlertText.classList=""
-            userNameAlertText.innerText = ""
+        let inputField = document.getElementById('userEmail')
+        let alertArea = document.getElementById('userEmailAlertText');
+        if (emailRegex.test(inputField.value)) {
+            inputField.classList="form-control is-valid"
+            alertArea.innerText="Not Valid"
+            alertArea.classList="d-none"  
         } else{
-            // userName.classList="form-control is-invalid"
-            userNameAlertText.style.backgroundColor="red"
-            userNameAlertText.classList="pl-5 pr-5 container-fluid w-100"
-            userNameAlertText.innerText = "Name Must Contain Three Letter and No Digits"
+            alertArea.innerText="Not Valid"
+            alertArea.classList="invalid-feedback d-block"
+            inputField.classList="form-control is-invalid"
         }
     })
    // password
    document.getElementById('userPassword').addEventListener("input",()=>{
-    let userName = document.getElementById('userPassword')
-    let userNameAlertText = document.getElementById('userPasswordAlertText');
-    let userNameText = document.querySelector(".userPasswordLabel");
-    if (passwordRegex.test(userName.value)) {
-        userNameText.style.backgroundColor = "green";
-        userNameText.style.color= "white";
-        userNameAlertText.style.backgroundColor=""
-        userNameAlertText.classList=""
-        userNameAlertText.innerText = ""
+    let inputField = document.getElementById('userPassword')
+    let alertArea = document.getElementById('userPasswordAlertText');
+    if (passwordRegex.test(inputField.value)) {
+        inputField.classList="form-control is-valid"
+        alertArea.innerText="Not Valid"
+        alertArea.classList="d-none"  
     } else{
-        // userName.classList="form-control is-invalid"
-        userNameAlertText.style.backgroundColor="red"
-        userNameAlertText.classList="pl-5 pr-5 container-fluid w-100"
-        userNameAlertText.innerText = "Name Must Contain Three Letter and No Digits"
+        alertArea.innerText="Not Valid"
+        alertArea.classList="invalid-feedback d-block"
+        inputField.classList="form-control is-invalid"
     }
 })
    //Confirm password
    document.getElementById('userConfirmPassword').addEventListener("input",()=>{
-    let userName = document.getElementById('userConfirmPassword')
-    let userNameAlertText = document.getElementById('userConfirmPasswordAlertText');
-    let userNameText = document.querySelector(".userConfirmPasswordLabel");
-    if (passwordRegex.test(userName.value)) {
-        userNameText.style.backgroundColor = "green";
-        userNameText.style.color= "white";
-        userNameAlertText.style.backgroundColor=""
-        userNameAlertText.classList=""
-        userNameAlertText.innerText = ""
+    let inputField = document.getElementById('userConfirmPassword')
+    let alertArea = document.getElementById('userConfirmPasswordAlertText');
+    if (passwordRegex.test(inputField.value)) {
+        inputField.classList="form-control is-valid"
+        alertArea.innerText="Not Valid"
+        alertArea.classList="d-none"  
     } else{
-        // userName.classList="form-control is-invalid"
-        userNameAlertText.style.backgroundColor="red"
-        userNameAlertText.classList="pl-5 pr-5 container-fluid w-100"
-        userNameAlertText.innerText = "Name Must Contain Three Letter and No Digits"
+        alertArea.innerText="Not Valid"
+        alertArea.classList="invalid-feedback d-block"
+        inputField.classList="form-control is-invalid"
     }
 })
    //mobile
    document.getElementById('userMobile').addEventListener("input",()=>{
-    let userName = document.getElementById('userMobile')
-    let userNameAlertText = document.getElementById('userMobileAlertText');
-    let userNameText = document.querySelector(".userMobileLabel");
-    if (mobileRegex.test(userName.value)) {
-        userNameText.style.backgroundColor = "green";
-        userNameText.style.color= "white";
-        userNameAlertText.style.backgroundColor=""
-        userNameAlertText.classList=""
-        userNameAlertText.innerText = ""
+    let inputField = document.getElementById('userMobile')
+    let alertArea = document.getElementById('userMobileAlertText');
+    if (mobileRegex.test(inputField.value)) {
+        inputField.classList="form-control is-valid"
+        alertArea.innerText="Not Valid"
+        alertArea.classList="d-none"  
     } else{
-        // userName.classList="form-control is-invalid"
-        userNameAlertText.style.backgroundColor="red"
-        userNameAlertText.classList="pl-5 pr-5 container-fluid w-100"
-        userNameAlertText.innerText = "Name Must Contain Three Letter and No Digits"
+        alertArea.innerText="Not Valid"
+        alertArea.classList="invalid-feedback d-block"
+        inputField.classList="form-control is-invalid"
     }
 })
    //Adress
