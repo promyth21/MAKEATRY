@@ -1,7 +1,14 @@
-.BgMainClr{
-    color :#5EBFF0
-
-}
-.BgMainClr{
+.SecondaryBgClr{
     background-color :#5EBFF0
+    
+}
+.SecondaryClr{
+    color :#5EBFF0
+}
+.primaryBgClr{
+    background-color :#221763
+    
+}
+.primaryClr{
+    color :#221763
 }
