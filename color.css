@@ -12,3 +12,21 @@
 .primaryClr{
     color :#221763
 }
+@media screen and (max-width: 576px){
+        .text-xs-justify{
+            text-align: justify;
+            color: red;
+        }
+  }
+
+
+
+@media screen and (min-width: 576px){
+        .text-xs-justify{
+            text-align: start;
+            color: green;
+        }
+  }
+
+
+

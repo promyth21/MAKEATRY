@@ -13,6 +13,8 @@ $row = mysqli_fetch_array($ExistEmail);
         print_r($row);
         echo "</pre>";
         if ($row['password'] === $userPassword && $row['role'] === "user") {
+session_start();
+$_SESSION['user']=$userEmail;
             echo "<script>window.alert('welcome');location.href='home.html'</script>";
         } else{
             echo "<script>window.alert('Password Invalid');location.href='login.html'</script>";
