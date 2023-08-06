@@ -13,7 +13,7 @@
 </head>
 
 <body class="primaryBgClr">
-  <header class="SecondaryBgClr" style="">
+  <header class="SecondaryBgClr">
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(34, 23, 99,0.75);">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
@@ -63,15 +63,194 @@
     <div class="container-fluid pb-4"
       style="background-image: url('assets/bg/headerBgRight.svg');background-repeat: no-repeat;background-size: cover; background-color: rgba(34, 23, 99,0.75);">
       <div class="row d-flex justify-content-around">
-        <div class="align-self-center col-xs-10 col-10 col-xl-12 col-xxl-4">
+        <div class="align-self-center col-xs-10 col-12 col-xl-12 col-xxl-4">
           <h1 class="text-light display-1 fw-bold">Optical
             Reality</h1>
           <p class="text-light fw-light display-6">We provide an interactive experience in which a real world
             environment<br>
             enhanced with computer-generated visual elements</p>
-          <div class="container d-flex">
-            <a class="btn btn-outline-light m-1" href="#">SignIn</a>
-            <a class="btn SecondaryBgClr text-dark m-1" href="#">Register</a>
+          <!-- signUP btn -->
+          <div class="container d-flex justify-content-start">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-light py-0 my-0" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop">
+              Sign Up
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+              aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title align-self-center" id="staticBackdropLabel">Create Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <!-- signIN -->
+                    <section class="d-flex container justify-content-center">
+                      <div class="row">
+                        <form action="signupAction.php" class="border-1 botder border-white"
+                          enctype="multipart/form-data" method="post">
+                          <h4 class="text-light text-center">UpdateData</h4>
+                          <!-- name -->
+                          <div class="container">
+                            <div class="input-group d-flex mt-4 mb-2">
+                              <span class="input-group-text userNameLabel" id="addon-wrapping">Name</span>
+                              <input id="userName" type="text" class="form-control" aria-label="Username"
+                                aria-describedby="addon-wrapping" name="userName">
+                            </div>
+                            <span id="userNameAlertText" class="d-block">
+                            </span>
+                          </div>
+                          <!-- email -->
+                          <div class="container">
+                            <div class="input-group flex-nowrap mt-2 mb-2">
+                              <span class="input-group-text userEmailLabel" id="addon-wrapping">Email</span>
+                              <input type="text" id="userEmail" class="form-control" aria-label="Username"
+                                aria-describedby="addon-wrapping" name="userEmail">
+                            </div>
+                            <span id="userEmailAlertText" class="">
+                          </div>
+                          <!-- password -->
+                          <div class="container">
+                            <div class="input-group flex-nowrap mt-2 mb-2">
+                              <span class="input-group-text userPasswordLabel" id="addon-wrapping">Password</span>
+                              <input type="text" id="userPassword" class="form-control" aria-label="Username"
+                                aria-describedby="addon-wrapping" name="userPassword">
+                            </div>
+                            <span id="userPasswordAlertText" class="">
+                          </div>
+                          <!--Confirm password -->
+                          <div class="container">
+                            <div class="input-group flex-nowrap mt-2 mb-2">
+                              <span class="input-group-text userConfirmPasswordLabel" id="addon-wrapping">Confirm
+                                Password</span>
+                              <input type="text" id="userConfirmPassword" class="form-control" aria-label="Username"
+                                aria-describedby="addon-wrapping" name="userConfirmPassword">
+                            </div>
+                            <span id="userConfirmPasswordAlertText" class="">
+                          </div>
+                          <!--mobile-->
+                          <div class="container">
+                            <div class="input-group flex-nowrap mt-2 mb-2">
+                              <span class="input-group-text userMobileLabel" id="addon-wrapping">Mobile</span>
+                              <input type="text" id="userMobile" name="userMobile" class="form-control"
+                                aria-label="Username" aria-describedby="addon-wrapping">
+                            </div>
+                            <span id="userMobileAlertText" class="">
+                          </div>
+                          <!-- Adress -->
+                          <div class="container">
+                            <div class="input-group flex-nowrap mt-2 mb-2">
+                              <span class="input-group-text userAdressLabel" id="addon-wrapping">Adress</span>
+                              <input type="text" id="userAdress" name="userAdress" class="form-control"
+                                aria-label="Username" aria-describedby="addon-wrapping">
+                            </div>
+                            <span id="userAdressAlertText" class="">
+                          </div>
+                          <!-- gender -->
+                          <div class="container">
+                            <div class="input-group flex-nowrap mt-2 mb-2 ">
+                              <span class="input-group-text userAdressLabel" id="addon-wrapping">Gender</span>
+                              <div class="w-100 bg-white d-flex align-items-center justify-content-evenly">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="userGender" id="exampleRadios1"
+                                    value="male" checked>
+                                  <label class="form-check-label" for="exampleRadios1">
+                                    Male
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="userGender" id="exampleRadios2"
+                                    value="female">
+                                  <label class="form-check-label" for="exampleRadios2">
+                                    Female
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="userGender" id="exampleRadios2"
+                                    value="other">
+                                  <label class="form-check-label" for="exampleRadios2">
+                                    Other
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <span id="userAdressAlertText" class="">
+                            </span>
+                          </div>
+                          <!-- image -->
+                          <div class="container col-sm-12">
+                            <div class="input-group mt-2 mb-2 ">
+                              <input type="file" class="form-control img-fluid" id="userImage" name="userImage" hidden
+                                accept="Image/*">
+                              <img id="imagePreview" class="w-100"
+                                style="display: none;max-height: 300px; object-fit: fill;">
+                            </div>
+                            <!-- <span id="userAdressAlertText" class=""> -->
+                            <h5 class="btn btn-light container w-100" id="imageBtn">Upload Image</h5>
+                          </div>
+                          <div class="container d-flex justify-content-between">
+                            <button type="submit" class="btn btn-dark"> Create a Acount
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-1"></div>
+            <!-- login -->
+            <!-- Button trigger modal -->
+            <button type="button" class="btn primaryBgClr text-white py-2 ml-5" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">
+              Login
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <section class="d-flex justify-content-center">
+                      <form action="loginAction.php" class="border-1 botder border-white" method="post">
+                        <!-- email -->
+                        <div class="container">
+                          <div class="input-group flex-nowrap mt-2 mb-2">
+                            <span class="input-group-text userEmailLabel" id="userLogLabel">Email</span>
+                            <input type="text" id="userLogEmail" class="form-control" aria-label="Username"
+                              aria-describedby="addon-wrapping" name="userEmail">
+                          </div>
+                          <span id="userLogEmailAlertText" class="userAlertText"></span>
+                        </div>
+                        <!-- password -->
+                        <div class="container">
+                          <div class="input-group flex-nowrap mt-2 mb-2">
+                            <span class="input-group-text userPasswordLabel" id="userLogLabel">Password</span>
+                            <input type="text" id="userLogPassword" class="form-control" aria-label="Username"
+                              aria-describedby="addon-wrapping" name="userPassword">
+                          </div>
+                          <span id="userLogPasswordAlertText" class="userAlertText"></span>
+                        </div>
+
+
+                        <div class="container d-flex justify-content-between">
+                          <button type="submit" class="btn btn-success"> Join
+                          </button>
+                        </div>
+                      </form>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
         <img class="col-xs-6 col-xl-4 col-xxl-4 col-sm-12" src="assets/image/headerRightImage.svg" alt="" style="">
@@ -83,20 +262,21 @@
     <section>
       <div class="container-fluid"
         style="background-image:url('assets/bg/Oohapebg.svg');background-color: #221763;background-repeat: no-repeat;background-size: contain; background-position: right;">
-          <div class="row justify-content-lg-start justify-content-md-start justify-content-lg-start justify-content-xl-around justify-content-xxl-around ">
-            <!-- <div class="col-xxl-2 d-sm-none d-md-none d-lg-none d-xl-none d-xxl-block"></div> -->
-            <div class="text-white text-xs-justify display-6 mt-5 col-md-12 col-lg-12 col-xl-3 col-xxl-3 pb-xl-4">
-              Augmented reality is an
-                interactive
-                experience in which a real world environment is enhanced with computer-generated visual elements,
-                sounds,
-                and other stimuli. It can provide a user with a heightened, more immersive experience than they would
-                experience otherwise that adds to the user's enjoyment or understanding.
-            </div>
-            <!-- <div class="col-xl-1 d-sm-none d-block d-xxl-block"></div> -->
-            <img class="col-10 col-md-10 col-lg-10 h-auto col-xl-8 col-xxl-8" src="assets/bg/tryOutBgMale.svg" alt=""
-              style="object-fit: cover;">
+        <div
+          class="row justify-content-lg-start justify-content-md-start justify-content-lg-start justify-content-xl-around justify-content-xxl-around ">
+          <!-- <div class="col-xxl-2 d-sm-none d-md-none d-lg-none d-xl-none d-xxl-block"></div> -->
+          <div class="text-white text-xs-justify display-6 mt-5 col-md-12 col-lg-12 col-xl-3 col-xxl-3 pb-xl-4">
+            Augmented reality is an
+            interactive
+            experience in which a real world environment is enhanced with computer-generated visual elements,
+            sounds,
+            and other stimuli. It can provide a user with a heightened, more immersive experience than they would
+            experience otherwise that adds to the user's enjoyment or understanding.
           </div>
+          <!-- <div class="col-xl-1 d-sm-none d-block d-xxl-block"></div> -->
+          <img class="col-10 col-md-10 col-lg-10 h-auto col-xl-8 col-xxl-8" src="assets/bg/tryOutBgMale.svg" alt=""
+            style="object-fit: cover;">
+        </div>
       </div>
     </section>
     <!-- tryout -->
@@ -124,7 +304,7 @@
               <h1 class="text-center container bg-white pb-4">Optical</h1>
             </div>
           </a>
-          
+
           <a class="btn col-xxl-5 col-xl-4 col-lg-5 col-md-5 col-sm-10 col-10" href="#">
             <div class="container">
               <img class="h-100 w-100" src="assets/bg/glassBg.svg" alt="">
@@ -137,7 +317,7 @@
               <h1 class="text-center container bg-white pb-4">Optical</h1>
             </div>
           </a>
-          
+
         </div>
       </div>
     </section>
@@ -145,31 +325,32 @@
   <!-- footer -->
   <footer class="SecondaryBgClr container-fluid mt-5 py-5">
     <!-- <div class="container" style="height: 30px;"></div> -->
-      <div class="row justify-content-xxl-around justify-content-lg-around justify-content-md-around justify-content-around">
-        <div class="col-xxl-4 col-lg-5 col-md-5 col-10 d-flex justify-content-center d-md-block">
-          <img class="mb-5" src="assets/icons/siteIcon.svg" alt="">
-          <p style="font-size: 18;" class="text-dark">The 100% Money Back Guarantee cleaning
-            company specialised in high quality cleaning.</p>
-        </div>
-        <div class="col-xxl-2 col-lg-5 col-md-5  col-5">
-          <p style="font-size: 18;" class="text-dark"><b>Navigation</b> </p>
-          <p style="font-size: 18;" class="text-dark">Help </p>
-          <p style="font-size: 18;" class="text-dark">Blog </p>
-          <p style="font-size: 18;" class="text-dark">Contact us </p>
-          <p style="font-size: 18;" class="text-dark">Request Quote </p>
-          <p style="font-size: 18;" class="text-dark">Login </p>
-        </div>
-        <div class="col-xxl-2 col-lg-5 col-md-5  col-5">
-          <p style="font-size: 18;" class="text-dark"><b>Support</b> </p>
-          <p style="font-size: 18;" class="text-dark">Terms & Conditions </p>
-          <p style="font-size: 18;" class="text-dark">Privacy Policy </p>
-        </div>
-        <div class="col-xxl-2 col-lg-5 col-md-5  col-5">
-          <p style="font-size: 18;" class="text-dark"><b>Follow us</b> </p>
-          <i class="fa-brands fa-facebook bg-white" style="width: 32px;height: 32px;"></i>
-          <i class="fa-brands fa-instagram bg-white" style="width: 32px;height: 32px;"></i>
-        </div>
+    <div
+      class="row justify-content-xxl-around justify-content-lg-around justify-content-md-around justify-content-around">
+      <div class="col-xxl-4 col-lg-5 col-md-5 col-10 d-flex justify-content-center d-md-block">
+        <img class="mb-5" src="assets/icons/siteIcon.svg" alt="">
+        <p style="font-size: 18;" class="text-dark">The 100% Money Back Guarantee cleaning
+          company specialised in high quality cleaning.</p>
       </div>
+      <div class="col-xxl-2 col-lg-5 col-md-5  col-5">
+        <p style="font-size: 18;" class="text-dark"><b>Navigation</b> </p>
+        <p style="font-size: 18;" class="text-dark">Help </p>
+        <p style="font-size: 18;" class="text-dark">Blog </p>
+        <p style="font-size: 18;" class="text-dark">Contact us </p>
+        <p style="font-size: 18;" class="text-dark">Request Quote </p>
+        <p style="font-size: 18;" class="text-dark">Login </p>
+      </div>
+      <div class="col-xxl-2 col-lg-5 col-md-5  col-5">
+        <p style="font-size: 18;" class="text-dark"><b>Support</b> </p>
+        <p style="font-size: 18;" class="text-dark">Terms & Conditions </p>
+        <p style="font-size: 18;" class="text-dark">Privacy Policy </p>
+      </div>
+      <div class="col-xxl-2 col-lg-5 col-md-5  col-5">
+        <p style="font-size: 18;" class="text-dark"><b>Follow us</b> </p>
+        <i class="fa-brands fa-facebook bg-white" style="width: 32px;height: 32px;"></i>
+        <i class="fa-brands fa-instagram bg-white" style="width: 32px;height: 32px;"></i>
+      </div>
+    </div>
     <div class="row text-center">
       <hr class="primaryBgClr w-100">
       <span>
@@ -183,6 +364,7 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+  <script src="signup.js"></script>
 </body>
 
 </html>

@@ -89,6 +89,34 @@ document.getElementById('userName').addEventListener("input",()=>{
         inputField.classList="form-control is-invalid"
     }
 })
+// ==================================Login===============================
+document.getElementById('userLogEmail').addEventListener("input", () => {
+    let inputField = document.getElementById('userLogEmail');
+    let alertArea = document.getElementById('userLogEmailAlertText');
+    if (emailRegex.test(inputField.value)) {
+      inputField.classList = "form-control is-valid";
+      alertArea.innerText = "Valid Email";
+      alertArea.classList = "valid-feedback d-block";
+    } else {
+      alertArea.innerText = "Invalid Email";
+      alertArea.classList = "invalid-feedback d-block";
+      inputField.classList = "form-control is-invalid";
+    }
+  });
+  document.getElementById('userLogPassword').addEventListener("input", () => {
+    let inputField = document.getElementById('userLogPassword');
+    let alertArea = document.getElementById('userLogPasswordAlertText');
+    if (passwordRegex.test(inputField.value)) {
+      inputField.classList = "form-control is-valid";
+      alertArea.innerText = "Valid Password";
+      alertArea.classList = "valid-feedback d-block";
+    } else {
+      alertArea.innerText = "Invalid Password";
+      alertArea.classList = "invalid-feedback d-block";
+      inputField.classList = "form-control is-invalid";
+    }
+  });
+  
 
 
 // =========================================================

@@ -12,12 +12,14 @@
 .primaryClr{
     color :#221763
 }
-@media screen and (max-width: 576px){
-        .text-xs-justify{
-            text-align: justify;
-            color: red;
+/* @media screen and (max-width: 576px){
+        .text-sm-justify{
+            text-align:justify;
+            white-space: 1px;
+            letter-spacing: 1px;
+            word-wrap: break-word;
         }
-  }
+  } */
 
 
 
