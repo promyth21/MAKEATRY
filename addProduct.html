@@ -12,93 +12,165 @@
 
 <body>
     <header>
-
-    </header>
+        <nav class="navbar navbar-light bg-light fixed-top text-white">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+              aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand m-auto" href="#">Make A try</a>
+            <div class="offcanvas offcanvas-start bg-dark text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+              aria-labelledby="offcanvasDarkNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Activities</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                  aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body bg-white">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="adminDashboard.php">DashBoard</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="addProduct.html">Add Product</a>
+                  </li>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Buyer Request</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">User Cart Product</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Out of Stock Products</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Users</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">View Sales Report</a>
+                  </li>
+                  <hr class="dropdown-divider bg-dark">
+                  <li><a class="dropdown-item" href="#">Logout <i class="fa-sharp fa-solid fa-right-from-bracket"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
     <main>
         <div class="container-xl px-4 mt-4 style= ">
             </nav>
             <hr class="mt-0 mb-4">
-            <div class="row">
-                <div class="col-xl-4">
-                    <!-- Profile picture -->
-                    <div class="card mb-4 mb-xl-0">
-                        <div class="card-header">Product Picture</div>
-                        <div class="card-body text-center">
-                            <img class="img-account-profile rounded-circle mb-2" src="" alt="">
-                            <div class="small font-italic text-muted mb-4">JPG or PNG</div>
-                            <button class="btn btn-primary" type="button">Upload new image</button>
+            <form action="addProductAction.php" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-xl-4">
+                        <!-- Profile picture -->
+                        <div class="card mb-4 mb-xl-0">
+                            <div class="card-header">Product Picture</div>
+                            <div class="card-body text-center input-group">
+                                <input type="file" class="form-control img-fluid" id="userImage" name="userImage" hidden
+                                    accept="Image/*">
+                                <img id="imagePreview" class="w-100"
+                                    style="display: none;max-height: 300px; object-fit: fill;">
+                            </div>
+                            <h5 class="btn btn-light container w-100" id="imageBtn">Upload Image</h5>
+                        </div>
+                    </div>
+    
+                    <div class="col-xl-8">
+                        <!-- Account details -->
+                        <div class="card mb-4">
+                            <div class="card-header">Add Product</div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="row gx-3 mb-3">
+                                        <div class="mb-3 col-md-6">
+                                            <label class="small mb-1" for="inputUsername">Name </label>
+                                            <input class="form-control" id="productName" type="text" name="productName">
+                                        </div>
+    
+                                        <div class="col-md-6">
+                                            <label class="small mb-1" for="inputFirstName">Catagory</label>
+                                            <input class="form-control" id="productCategory" name="productCategory" type="text" placeholder=""
+                                                value="">
+                                        </div>
+    
+                                        <div class="col-md-6">
+                                            <label class="small mb-1" for="inputLastName">Size</label>
+                                            <input class="form-control" id="productSize" name="productSize" type="text" placeholder=""
+                                                value="">
+                                        </div>
+    
+                                        <div class="col-md-6">
+                                            <label class="small mb-1" for="inputOrgName">Color</label>
+                                            <input class="form-control" id="productColor" name="productColor" type="text" placeholder="">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="small mb-1" for="inputLocation">Style</label>
+                                            <input class="form-control" id="productStyle" name="productStyle" type="text" placeholder=""
+                                                value="">
+                                        </div>
+    
+                                        <div class="col-md-6 mb-3">
+                                            <label class="small mb-1" for="inputEmailAddress">Brand</label>
+                                            <input class="form-control" id="productBrand" name="productBrand" type="text" placeholder=""
+                                                value="">
+                                        </div>
+    
+                                        <div class="col-md-6">
+                                            <label class="small mb-1" for="inputPhone">Price</label>
+                                            <input class="form-control" id="productPrice" name="productPrice" type="text" placeholder="" value="">
+                                        </div>
+    
+                                        <div class="col-md-6">
+                                            <label class="small mb-1" for="inputgender">Model</label>
+                                            <input class="form-control" id="productModel" name="productModel" type="text" name="gender">
+                                        </div>
+                                        <div class="container ">
+                                            <div class="input-group flex-nowrap mt-2 mb-2 ">
+                                                <span class="input-group-text userAdressLabel"
+                                                    id="addon-wrapping">Gender</span>
+                                                <div
+                                                    class="w-100 bg-white d-flex align-items-center justify-content-evenly">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="productGender"
+                                                            id="exampleRadios1" value="male" checked>
+                                                        <label class="form-check-label" for="exampleRadios1">
+                                                            Male
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="productGender"
+                                                            id="exampleRadios2" value="female">
+                                                        <label class="form-check-label" for="exampleRadios2">
+                                                            Female
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="productGender"
+                                                            id="exampleRadios2" value="other">
+                                                        <label class="form-check-label" for="exampleRadios2">
+                                                            Other
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span id="userAdressAlertText" class="">
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- Save changes button-->
+                                    <button class="btn btn-primary" type="submit">Upload</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-8">
-                    <!-- Account details -->
-                    <div class="card mb-4">
-                        <div class="card-header">Add Product</div>
-                        <div class="card-body">
-                            <form>
 
-                                <div class="mb-3">
-                                    <label class="small mb-1" for="inputUsername">Name </label>
-                                    <input class="form-control" id="inputUsername" type="text" value="">
-                                </div>
-
-                                <div class="row gx-3 mb-3">
-
-                                    <div class="col-md-6">
-                                        <label class="small mb-1" for="inputFirstName"></label>
-                                        <input class="form-control" id="inputFirstName" type="text"
-                                            placeholder="Enter your first name" value="">
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="small mb-1" for="inputLastName">Last name</label>
-                                        <input class="form-control" id="inputLastName" type="text"
-                                            placeholder="Enter your last name" value="">
-                                    </div>
-                                </div>
-
-                                <div class="row gx-3 mb-3">
-
-                                    <div class="col-md-6">
-                                        <label class="small mb-1" for="inputOrgName">Organization name</label>
-                                        <input class="form-control" id="inputOrgName" type="text"
-                                            placeholder="Enter your organization name" value="">
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="small mb-1" for="inputLocation">Location</label>
-                                        <input class="form-control" id="inputLocation" type="text"
-                                            placeholder="Enter your location" value="">
-                                    </div>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="small mb-1" for="inputEmailAddress">Email address</label>
-                                    <input class="form-control" id="inputEmailAddress" type="email"
-                                        placeholder="Enter your email address" value="name@example.com">
-                                </div>
-
-                                <div class="row gx-3 mb-3">
-
-                                    <div class="col-md-6">
-                                        <label class="small mb-1" for="inputPhone">Mobile number</label>
-                                        <input class="form-control" id="inputPhone" type="tel"
-                                            placeholder="Enter your phone number" value="">
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="small mb-1" for="inputgender">Gender</label>
-                                        <input class="form-control" id="inputgender" type="text" name="gender"
-                                            placeholder="Gender" value="">
-                                    </div>
-                                </div>
-                                <!-- Save changes button-->
-                                <button class="btn btn-primary" type="button">Save changes</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </form>
+            
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -106,7 +178,19 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-    <script src=""></script>
+    <script >
+        let imgInput = document.getElementById('userImage');
+document.getElementById('imageBtn').addEventListener('click', () => {
+    imgInput.click();
+});
+let preview = document.getElementById('imagePreview');
+imgInput.addEventListener('change', () => {
+    if (imgInput.files && imgInput.files[0]) {
+        preview.src = URL.createObjectURL(imgInput.files[0]);
+        preview.style.display = 'inline-block';
+    }
+});
+    </script>
 </body>
 
 </html>

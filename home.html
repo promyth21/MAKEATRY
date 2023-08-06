@@ -24,13 +24,13 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul class="navbar-nav mr-auto d-flex justify-content-around align-items-center container-fluid">
             <li class="nav-item">
-              <a class="nav-link" href="#"><img src="assets/icons/siteIcon.svg" alt=""></a>
+              <a class="nav-link" href="#"><img class="rounded" src="assets/icons/siteIcon.svg" alt=""></a>
             </li>
             <li class="nav-item active">
               <a class="nav-link text-light" href="#" style="font-size: 24px;">Home <span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="#">Product</a>
+              <a class="nav-link text-light" href="viewProduct.php">Product</a>
             </li>
             <li class="nav-item ">
               <a class="nav-link text-light" href="#">Service</a>
@@ -52,7 +52,7 @@
                     </a></li>
             </li>
             <hr class="dropdown-divider">
-            <li><a class="dropdown-item" href="#">Logout <i class="fa-sharp fa-solid fa-right-from-bracket"></i></a>
+            <li><a class="dropdown-item" href="sessionDistroy.php">Logout <i class="fa-sharp fa-solid fa-right-from-bracket"></i></a>
             </li>
           </ul>
         </div>
@@ -91,7 +91,6 @@
                       <div class="row">
                         <form action="signupAction.php" class="border-1 botder border-white"
                           enctype="multipart/form-data" method="post">
-                          <h4 class="text-light text-center">UpdateData</h4>
                           <!-- name -->
                           <div class="container">
                             <div class="input-group d-flex mt-4 mb-2">
@@ -275,7 +274,7 @@
           </div>
           <!-- <div class="col-xl-1 d-sm-none d-block d-xxl-block"></div> -->
           <img class="col-10 col-md-10 col-lg-10 h-auto col-xl-8 col-xxl-8" src="assets/bg/tryOutBgMale.svg" alt=""
-            style="object-fit: cover;">
+            style="object-fit: cover; overflow-x: visible;">
         </div>
       </div>
     </section>
@@ -301,20 +300,20 @@
           <a class="btn col-xxl-5 col-xl-4 col-lg-5 col-md-5 col-sm-10 col-10" href="#">
             <div class="container">
               <img class="h-100 w-100" src="assets/bg/glassBg.svg" alt="">
-              <h1 class="text-center container bg-white pb-4">Optical</h1>
+              <h1 class="text-center container bg-white pb-4">Fashion</h1>
             </div>
           </a>
 
           <a class="btn col-xxl-5 col-xl-4 col-lg-5 col-md-5 col-sm-10 col-10" href="#">
             <div class="container">
               <img class="h-100 w-100" src="assets/bg/glassBg.svg" alt="">
-              <h1 class="text-center container bg-white pb-4">Optical</h1>
+              <h1 class="text-center container bg-white pb-4">Sunglass</h1>
             </div>
           </a>
           <a class="btn col-xxl-5 col-xl-4 col-lg-5 col-md-5 col-sm-10 col-10" href="#">
             <div class="container">
               <img class="h-100 w-100" src="assets/bg/glassBg.svg" alt="">
-              <h1 class="text-center container bg-white pb-4">Optical</h1>
+              <h1 class="text-center container bg-white pb-4">Sports</h1>
             </div>
           </a>
 
@@ -366,5 +365,4 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
   <script src="validate.js"></script>
 </body>
-
 </html>

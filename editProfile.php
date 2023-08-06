@@ -37,7 +37,7 @@ if(isset($_SESSION['user'])) {
                         <div class='input-group mt-2 mb-2 '>
                             <input type='file' class='form-control img-fluid' id='userImage' name='userImage' hidden
                                 accept='Image/*' onChange='imgs()' value='$userImage'>
-                            <img id='imagePreview' src='$userImage' class='w-100 d-block'
+                            <img id='imagePreview' src='$userImage' class='w-100 d-block rounded-circle'
                                 style='display: none;max-height: 300px; object-fit: fill;' style='d-block'>
                         </div>
                         <!-- <span id='userAdressAlertText' class=''> -->

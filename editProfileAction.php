@@ -1,5 +1,13 @@
 <?php
 session_start();
+session_start();
+            if(isset($_SESSION['user'])){
+
+            }
+            else{
+              header("Location: home.html");
+                exit();
+            }
 include 'database.php';
     $checkImageUpdated = $_FILES['userImage'];
     if ($checkImageUpdated['name'] != null) {
