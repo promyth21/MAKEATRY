@@ -1,9 +1,9 @@
 <?php 
 $hostName="localhost";
-$userName="root";
+$DbUserName="root";
 $password="";
 $databaseName="makeatry";
-$connect = mysqli_connect($hostName,$userName,$password,$databaseName);
+$connect = mysqli_connect($hostName,$DbUserName,$password,$databaseName);
 if(!$connect){
     die("DataBase Error");
 }

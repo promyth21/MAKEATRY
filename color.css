@@ -29,6 +29,10 @@
             color: green;
         }
   }
-
+@media screen and (min-width:721px){
+    #tryout{
+        height: 1400px !important;
+    }
+}
 
 
